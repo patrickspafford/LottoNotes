@@ -5,6 +5,8 @@ An iOS app for note-taking that helps users randomly review old notes. By (somet
 
 ## Features
 - When a random note is opened (that is, you "win the lottery"), users must at the least scroll down to the bottom of the note before they can declare that they have read it.
-- Easily create simple notes with a title and content
+- Easily create simple no-nonsense notes
+- Notes are randomized after the creation or edit of a note
 - Users can conveniently edit old notes when they "win the lottery"
+- Delete notes with a swipe
 - Refined dark theme
