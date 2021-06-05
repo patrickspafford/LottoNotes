@@ -19,13 +19,13 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .dark
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "Optima", size: 20)!]
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "Arial", size: 20)!]
         UINavigationBar.appearance().titleTextAttributes = attributes
         shuffleNotes()
         tableView.reloadData()
         pageTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        pageTitle.text = "My LottoNotes"
-        pageTitle.font = UIFont(name: "Optima", size: 25)
+        pageTitle.text = "My Notes"
+        pageTitle.font = UIFont(name: "Arial", size: 25)
         pageTitle.textAlignment = .center
         self.navigationItem.titleView = pageTitle
         randomNote()
@@ -62,14 +62,14 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: mainTableIdentifier, for: indexPath)
         cell.textLabel?.text = notes[indexPath.row].title
-        cell.textLabel?.font = UIFont(name: "Optima", size: 22)
+        cell.textLabel?.font = UIFont(name: "Arial", size: 22)
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.amSymbol = "AM"
         dateFormatter.pmSymbol = "PM"
         dateFormatter.dateFormat = "h:mm a E, d MMM y"
         let dateString = dateFormatter.string(from: notes[indexPath.row].date)
-        cell.detailTextLabel?.font = UIFont(name: "Optima", size: 12)
+        cell.detailTextLabel?.font = UIFont(name: "Arial", size: 12)
         cell.detailTextLabel?.text = dateString
         return cell
     }

@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IeO-Tu-PeC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IeO-Tu-PeC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My LottoNotes-->
+        <!--My Notes-->
         <scene sceneID="ay0-vq-rGE">
             <objects>
                 <tableViewController interfaceStyle="dark" id="EyU-8Z-f3I" customClass="MainTableViewController" customModule="LottoNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MnN-dE-Xxn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mainTableIdentifier" textLabel="l0A-cK-eB5" detailTextLabel="Zzp-qK-IaH" style="IBUITableViewCellStyleSubtitle" id="uEb-Sv-REP">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uEb-Sv-REP" id="p8y-Ie-DX4">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l0A-cK-eB5">
-                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -50,7 +51,7 @@
                             <outlet property="delegate" destination="EyU-8Z-f3I" id="WYF-0u-BR2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My LottoNotes" id="RIK-Cf-r3v">
+                    <navigationItem key="navigationItem" title="My Notes" id="RIK-Cf-r3v">
                         <barButtonItem key="rightBarButtonItem" image="plus.circle.fill" catalog="system" id="mvs-ea-tCw">
                             <connections>
                                 <segue destination="qmn-wP-B9t" kind="show" identifier="EditNote" id="kRN-X3-a1D"/>
@@ -71,18 +72,19 @@
             <objects>
                 <viewController id="qmn-wP-B9t" customClass="NoteViewController" customModule="LottoNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pnF-tU-nOH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QsD-s8-VdG">
                                 <rect key="frame" x="20" y="20" width="374" height="734"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pgL-I3-b3x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QsD-s8-VdG" firstAttribute="centerY" secondItem="pgL-I3-b3x" secondAttribute="centerY" id="3rj-MW-hmJ"/>
@@ -92,7 +94,6 @@
                             <constraint firstItem="QsD-s8-VdG" firstAttribute="top" secondItem="pgL-I3-b3x" secondAttribute="top" constant="20" id="b9t-Pl-sgM"/>
                             <constraint firstItem="QsD-s8-VdG" firstAttribute="centerX" secondItem="pgL-I3-b3x" secondAttribute="centerX" id="ru8-p2-Rck"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pgL-I3-b3x"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="LbO-9D-Ij5" appends="YES" id="bfY-Cm-GUY"/>
                         </connections>
@@ -140,5 +141,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

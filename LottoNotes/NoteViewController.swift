@@ -27,16 +27,16 @@ class NoteViewController: UIViewController, UITextViewDelegate {
         noteBody.text = previousBody
         noteBody.delegate = self
         configureTitle()
-        if !isEdit || isRandom {
+        if !isEdit || isRandom { // Cannot save empty notes
             completeNote.isEnabled = false
         }
         if isRandom {
-            navigationItem.hidesBackButton = true
+            navigationItem.hidesBackButton = true // They must scroll down
         }
         self.navigationItem.titleView = textField
     }
     
-    @IBAction private func textFieldDoneEditing(_ sender: Any) {
+    @IBAction private func textFieldDoneEditing(_ sender: Any) { // Single tap dismiss?
         textField.resignFirstResponder()
         noteBody.resignFirstResponder()
     }
@@ -52,7 +52,7 @@ class NoteViewController: UIViewController, UITextViewDelegate {
     func configureTitle() {
         textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
         textField.text = previousTitle
-        textField.font = UIFont(name: "Optima", size: 25)
+        textField.font = UIFont(name: "Arial", size: 25)
         textField.textAlignment = .center
     }
     
